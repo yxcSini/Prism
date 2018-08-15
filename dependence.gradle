@@ -1,0 +1,44 @@
+def supportVersion      = "27.1.1"
+def prismsdkVersion     = "2.0.10-SNAPSHOT"
+def yhookVersion        = "2.0.0-SNAPSHOT"
+def gtrsdkVersion       = "2.0.1-SNAPSHOT"
+def datatoolVersion     = "2.0.3-SNAPSHOT"
+def anotationVersion    = "2.0.0-SNAPSHOT"
+
+rootProject.ext {
+    android = [
+            compileSdkVersion: 27,
+            buildToolsVersion: '28.0.1',
+            minSdkVersion    : 21,
+            targetSdkVersion : 23,
+            versionCode      : 20,
+            versionName      : "2.0.0-SNAPSHOT"
+    ]
+
+    prism = [
+            prismsdkVersion     : "2.0.10-SNAPSHOT",
+            yhookVersion        : "2.0.0-SNAPSHOT",
+            gtrsdkVersion       : "2.0.1-SNAPSHOT",
+            datatoolVersion     : "2.0.3-SNAPSHOT",
+            anotationVersion    : "2.0.0-SNAPSHOT"
+    ]
+
+    dependencies = [
+            //android-support
+            "support-annotations"         : "com.android.support:support-annotations:${supportVersion}",
+            "support-v4"                  : "com.android.support:support-v4:${supportVersion}",
+            "appcompat-v7"                : "com.android.support:appcompat-v7:${supportVersion}",
+            "cardview-v7"                 : "com.android.support:cardview-v7:${supportVersion}",
+            "design"                      : "com.android.support:design:${supportVersion}",
+            "junit"                       : "junit:junit:4.12",
+            "androidasync"                : "com.koushikdutta.async:androidasync:2.+",
+            "pslib-uidialog"              : "com.paisheng.psliblite:ui-dialog:1.4",
+
+            //prism
+            "yhook"                       : "com.paisheng.at:prism_yhook:${yhookVersion}",
+            "gtrsdk"                      : "com.paisheng.at:prism_gtrsdk:${gtrsdkVersion}",
+            "datatool"                    : "com.paisheng.at:prism_datatool:${datatoolVersion}",
+            "anotation"                   : "com.paisheng.at:prism_anotation:${anotationVersion}",
+            "prism"                       : "com.paisheng.at:prism:${prismsdkVersion}"
+    ]
+}

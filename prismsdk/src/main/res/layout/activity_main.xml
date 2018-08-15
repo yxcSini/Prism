@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/wlan_enabled"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/menu_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/pls_check_network_state"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/shared_wifi_state"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/shared_wifi_enable" />
+
+    <TextView
+        android:id="@+id/shared_wifi_state_hint"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/pls_input_the_following_address_in_pc_browser"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/shared_wifi_address"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="http://10.100.9.195:8081"
+        android:textColor="#6495ED"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textColor="#FF4081"
+        android:background="#506495ED"
+        android:text="发布"
+        android:onClick="report"/>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF4081"
+        android:background="#506495ED"
+        android:text="查看历史报告"
+        android:onClick="history"/>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF4081"
+        android:background="#506495ED"
+        android:text="检测WiFi"
+        android:onClick="checkWifi"/>
+</LinearLayout>
