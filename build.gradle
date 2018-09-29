@@ -6,8 +6,6 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven { url "http://10.100.11.222:8081/nexus/content/repositories/psandroid/" }
-        maven { url "http://10.100.11.222:8081/nexus/content/repositories/psandroidsnap/" }
         google()
     }
     dependencies {
@@ -23,8 +21,6 @@ allprojects {
         jcenter()
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven { url "http://10.100.11.222:8081/nexus/content/repositories/psandroid/" }
-        maven { url "http://10.100.11.222:8081/nexus/content/repositories/psandroidsnap/" }
         google()
     }
 }
