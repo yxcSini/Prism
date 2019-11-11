@@ -5,17 +5,35 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
-    <application
-        android:allowBackup="true"
-        android:label="@string/app_name"
-        android:supportsRtl="true">
-        <activity android:name=".view.MainActivity"/>
+    <application>
+        <service
+            android:name=".PrismOnService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:process=":prism" />
 
         <service
             android:name=".report.server.WebService"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"
+            android:process=":prism" />
+        <service
+            android:name="com.tencent.wstt.gt.service.GTRService"
+            android:exported="true"
+            android:process=":prism">
+            <intent-filter>
+                <action
+                    android:name="GTR.GTRService"
+                    android:exported="true" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

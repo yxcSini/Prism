@@ -459,6 +459,7 @@ function getFragmentStartFinishTime(fragmentInfo){	//Fragment的加载完成时�
 			}
 			if(fragmentLifecycleMethodList[d].methodName=="onResume"){
 				 startFinishTime = fragmentLifecycleMethodList[d].methodEndTime;
+			    return startFinishTime;
 			}
 		}
 	}

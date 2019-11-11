@@ -32,15 +32,11 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-//    implementation project(':gtrsdk')
     implementation rootProject.ext.dependencies["gtrsdk"]
-//    implementation project(':datatool')
     implementation rootProject.ext.dependencies["datatool"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
-    implementation rootProject.ext.dependencies["support-v4"]
     testImplementation rootProject.ext.dependencies["junit"]
-    implementation rootProject.ext.dependencies["androidasync"]
-    implementation rootProject.ext.dependencies["pslib-uidialog"]
+    compileOnly group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.60'
+    compileOnly group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.60'
 }
 
 uploadArchives {

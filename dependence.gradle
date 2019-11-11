@@ -8,9 +8,9 @@ def anotationVersion    = "2.0.0-SNAPSHOT"
 rootProject.ext {
     android = [
             compileSdkVersion: 27,
-            buildToolsVersion: '28.0.1',
-            minSdkVersion    : 21,
-            targetSdkVersion : 23,
+            buildToolsVersion: '28.0.3',
+            minSdkVersion    : 15,
+            targetSdkVersion : 27,
             versionCode      : 20,
             versionName      : "2.0.0-SNAPSHOT"
     ]

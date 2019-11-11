@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.paisheng.prism.test">
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true" android:theme="@style/AppTheme"
-        android:name=".MyApplication">
-        <activity android:name=".LoginActivity" android:label="@string/app_name">
+    <uses-sdk tools:overrideLibrary="com.paisheng.prismsdk,com.utest.gtp.connect.client,com.kunpeng.pit" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name="com.tencent.wstt.gt.service.GTRService"
-            android:exported="true"
-            android:process=":prism">
-            <intent-filter>
-                <action
-                    android:name="GTR.GTRService"
-                    android:exported="true" />
-            </intent-filter>
-        </service>
+        <activity android:name="com.paisheng.prismsdk.view.MainActivity" />
     </application>
 
 </manifest>
